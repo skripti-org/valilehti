@@ -1,0 +1,28 @@
+---
+import { SITE } from '../config'
+import BaseHead from '../components/BaseHead.astro'
+
+const { content } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={content.title ? `${SITE.title} | ${content.title}` : SITE.title}
+      description={content.description}
+      permalink={SITE.url}
+    />
+  </head>
+  <div class="post__header">
+    <div class="post__tags">
+      {content.tags.length > 0 &&
+        content.tags.map((tag) => (
+          <a class="post__tag" href={`/tags/${tag}`} title={tag}>
+            {tag}
+          </a>
+        ))}
+    </div>
+    <h1 class="post__title">{content.title}</h1>
+  </div>
+</html>
