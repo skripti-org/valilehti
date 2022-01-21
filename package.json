@@ -6,10 +6,18 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier --write --plugin-search-dir=. .",
+    "prettier:check": "prettier --check --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "astro": "^0.22.14",
-    "@astrojs/renderer-react": "^0.4.1"
+    "@astrojs/renderer-react": "^0.4.1",
+    "astro": "^0.22.17"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.10",
+    "@types/react": "^17.0.38",
+    "prettier": "^2.5.1",
+    "prettier-plugin-astro": "0.0.11"
   }
 }
