@@ -13,10 +13,12 @@ export const NAV_ITEMS: NavItems = {
     path: '/tagit',
     title: 'tagit',
   },
+  /*
   media: {
     path: '/media',
     title: 'media',
   },
+  */
   about: {
     path: '/about',
     title: 'about',

@@ -1,0 +1,27 @@
+---
+import { getMonthName } from '../utils/utils.ts'
+const { post } = Astro.props
+---
+
+<div class="post-preview">
+  <div>
+    <div class="post-preview__date">
+      <span class="post-preview__date__day"
+        >{new Date(post.date).getDate()}</span
+      >
+      <span class="post-preview__date__month-n-year"
+        >{`${getMonthName(post.date)} ${new Date(
+          post.date
+        ).getFullYear()}`}</span
+      >
+    </div>
+  </div>
+  <div>
+    <h4 class="post-preview__title">
+      <a href={post.url} title={post.title}>{post.title}</a>
+    </h4>
+    <p class="post-preview__desc">
+      {post.description}
+    </p>
+  </div>
+</div>

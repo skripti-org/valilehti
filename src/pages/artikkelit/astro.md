@@ -7,8 +7,10 @@ author: Fred K. Schott
 authorTwitter: FredKSchott
 category: design
 tags:
-- astro
-- jam-stack
+  - astro
+  - jam-stack
+  - terve
+  - test
 description: There's a simple secret to building a faster website — just ship less.
 ---
 

@@ -1,0 +1,32 @@
+---
+import DefaultPageLayout from '../../layouts/default.astro'
+
+let title = 'Tagit'
+let description = ''
+
+const allPosts = await Astro.fetchContent('../artikkelit/*.md')
+const tags = [
+  ...new Set(
+    [].concat.apply(
+      [],
+      allPosts.map((post) => post.tags)
+    )
+  ),
+]
+---
+
+<DefaultPageLayout content={{ title, description }}>
+  <ul>
+    {tags.map((tag) => (
+      <li>
+        <a
+          class="tag"
+          href={`/tags/${tag}`}
+          title={`View posts tagged under "${tag}"`}
+        >
+          {tag}
+        </a>
+      </li>
+    ))}
+  </ul>
+</DefaultPageLayout>

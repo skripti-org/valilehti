@@ -1,0 +1,8 @@
+---
+import PostPreview from './PostPreview.astro'
+const { posts } = Astro.props
+---
+
+<section>
+  {posts.map((post) => <PostPreview post={post} />)}
+</section>

@@ -3,9 +3,9 @@ layout:
 title:
 date:
 image:
-author:
+author: Skripti ry
 category:
 tags:
-  - astro
+## esim: - skripti
 description:
 ---

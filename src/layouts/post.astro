@@ -1,6 +1,8 @@
 ---
 import { SITE } from '../config'
+import MainLayout from '../components/MainLayout.astro'
 import BaseHead from '../components/BaseHead.astro'
+import Prose from '../components/Prose.astro'
 
 const { content } = Astro.props
 ---
@@ -11,18 +13,37 @@ const { content } = Astro.props
     <BaseHead
       title={content.title ? `${SITE.title} | ${content.title}` : SITE.title}
       description={content.description}
-      permalink={SITE.url}
     />
   </head>
-  <div class="post__header">
-    <div class="post__tags">
-      {content.tags.length > 0 &&
-        content.tags.map((tag) => (
-          <a class="post__tag" href={`/tags/${tag}`} title={tag}>
-            {tag}
-          </a>
-        ))}
+  <MainLayout>
+    <div class="post__header">
+      <div class="post__tags">
+        {content.tags.length > 0 &&
+          content.tags.map((tag) => (
+            <a class="post__tag" href={`/tags/${tag}`} title={tag}>
+              {tag}
+            </a>
+          ))}
+      </div>
+      <h1 class="post__title">{content.title}</h1>
+      <h5 class="post__desc">
+        <a
+          class="post__author"
+          href={`https://twitter.com/${content.authorTwitter}`}
+          title={`${content.author}'s twitter`}
+          target="_blank"
+          rel="external">{content.author}</a
+        > |
+        <span class="post__date"
+          >{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(
+            new Date(content.date)
+          )}</span
+        >
+      </h5>
     </div>
-    <h1 class="post__title">{content.title}</h1>
-  </div>
+    <!--<img src={content.image} alt={content.title} />-->
+    <Prose>
+      <slot />
+    </Prose>
+  </MainLayout>
 </html>
