@@ -9,6 +9,13 @@ import { SITE } from '../config'
         href={SITE.githubUrl}
         title={`${SITE.name}'s Github URL'`}>{SITE.name}</a
       >
+      theme on <a href="https://astro.build/">Astro</a>
     </div>
   </nav>
 </footer>
+
+<style>
+  .footer {
+    @apply py-6 border-t;
+  }
+</style>

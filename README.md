@@ -7,31 +7,15 @@ Skripti ry:n blogi.
 - [Astro](https://astro.build)
 - [Astro - Ink](https://github.com/one-aalam/astro-ink)
 - [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- [Bootstrap](https://getbootstrap.com) vai [Tailwind](https://tailwindcss.com/) vai joku muu? Astro inkin mukana tuli valmiina tailwind ja se tällä hetkellä käytössä.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
+## Komennot
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- `npm install` asenna riippuvuudet
+- `npm run dev` tai `npm start`: käynnistä kehitysympäristö
+- `npm run preview` testaa buildia lokaalisti
+- `npm run build`: luo uusi build-versio
+- `npm run prettier:check`: tarkista koodin muotoilu
+- `npm run format`: korjaa koodin muotoilu
 
-## 🚀 Project Structure
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+Helpottaa vscodessa ajamista, jos setuppaa tämän [Run NPM scripts in Visual Studio Code with a Single Click](http://www.matthiassommer.it/programming/testing/run-npm-scripts-in-visual-studio-code-with-a-click-of-a-button/)

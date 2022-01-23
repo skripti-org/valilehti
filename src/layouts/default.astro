@@ -24,3 +24,15 @@ const { content, showPageHeader = true } = Astro.props
     <slot />
   </MainLayout>
 </html>
+
+<style>
+  .page__header {
+    @apply py-4 mb-1;
+  }
+  .page__title {
+    @apply text-5xl font-extrabold text-primary dark:text-primaryDark;
+  }
+  .page__desc {
+    @apply text-gray-400;
+  }
+</style>

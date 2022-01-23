@@ -2,9 +2,9 @@
 import DefaultPageLayout from '../../layouts/default.astro'
 
 let title = 'Tagit'
-let description = ''
+let description = 'täältäpä löytyy'
 
-const allPosts = await Astro.fetchContent('../artikkelit/*.md')
+const allPosts = Astro.fetchContent('../artikkelit/*.md')
 const tags = [
   ...new Set(
     [].concat.apply(
@@ -16,12 +16,12 @@ const tags = [
 ---
 
 <DefaultPageLayout content={{ title, description }}>
-  <ul>
+  <ul class="tag-list">
     {tags.map((tag) => (
       <li>
         <a
           class="tag"
-          href={`/tags/${tag}`}
+          href={`/tagit/${tag}`}
           title={`View posts tagged under "${tag}"`}
         >
           {tag}
@@ -30,3 +30,12 @@ const tags = [
     ))}
   </ul>
 </DefaultPageLayout>
+
+<style>
+  .tag-list {
+    @apply list-none flex gap-2 flex-wrap;
+  }
+  .tag {
+    @apply inline-block text-xl px-4 py-1 rounded-full text-primary bg-primaryDark dark:bg-primary dark:text-primaryDark hover:bg-primary hover:text-primaryDark dark:hover:bg-primaryDark dark:hover:text-primary;
+  }
+</style>
