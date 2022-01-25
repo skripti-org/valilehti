@@ -12,14 +12,22 @@ module.exports = {
   },
   theme: {
     colors: {
+      /*
+      dark80: "#070D10",
+      dark60: "#3A4043",
+      dark40: "#6D7376",
+      dark20: "#A0A6A9",
+      dark0: "#D3D9DC",
+      */
       ...colors,
       // Shades-of-X
       // keep one group of colors enabled at a time
 
-      primary: colors.purple[700],
-      primaryDark: colors.purple[300],
-      primarySecondary: colors.purple[800],
-      primarySecondaryDark: colors.purple[500],
+      backgroundDark: '#2a282d',
+      primary: '#FFFFFF',
+      primaryDark: '#6D7376',
+      primarySecondary: '#A0A6A9',
+      primarySecondaryDark: '#FFFFFF',
 
       // primary: colors.pink[700],
       // primaryDark: colors.pink[300],
@@ -52,13 +60,13 @@ module.exports = {
       // primarySecondaryDark: colors.rose[500],
     },
     fontFamily: {
-      sans: ['Fira Code', ...fontFamily.sans],
+      sans: ['Pro Regular', ...fontFamily.sans],
     },
     extend: {
       typography: (theme) => ({
         dark: {
           css: {
-            color: theme('colors.gray.200'),
+            color: theme('colors.primary'),
           },
         },
         DEFAULT: {
@@ -70,11 +78,11 @@ module.exports = {
               },
             },
             blockquote: {
-              color: theme('colors.primary'),
+              color: theme('colors.primarySecondaryDark'),
               borderColor: theme('colors.primaryDark'),
             },
             'blockquote > p::before, p::after': {
-              color: theme('colors.primaryDark'),
+              color: theme('colors.primarySecondaryDark'),
             },
             h1: {
               color: theme('colors.primarySecondaryDark'),

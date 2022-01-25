@@ -7,7 +7,8 @@ import SvgIcon from './SvgIcon.astro'
 <header class="header">
   <div class="header__logo">
     <a href="/" class="avatar">
-      <img class="header__logo-img" src="/assets/logo.svg" alt="Astro logo" />
+      <img class="header__logo-img" src="/assets/Floppis.svg" alt="Astro logo"
+      />
     </a>
   </div>
   <div class="header__meta flex-1">
@@ -46,10 +47,10 @@ import SvgIcon from './SvgIcon.astro'
 
 <style>
   .header {
-    @apply flex gap-4 border-b py-3 /* border-gray-200 dark:border-gray-700 - check styles/global.css */;
+    @apply flex gap-4 border-b py-3/* border-gray-200 dark:border-gray-700 - check styles/global.css */;
   }
   .header__logo-img {
-    @apply w-16 h-16 rounded-full overflow-hidden;
+    @apply w-20 h-20;
   }
   .header__title {
     @apply text-4xl font-extrabold md:text-5xl text-primarySecondary dark:text-primarySecondaryDark;
