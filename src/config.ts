@@ -29,7 +29,7 @@ export const SITE = {
   // Your site's detail
   name: 'Välilehti',
   title: 'Välilehti',
-  description: 'Skripti ry - Välilehti',
+  description: 'Skripti ry:n blogi',
   url: 'https://blog.skripti.org',
   githubUrl: 'https://github.com/skripti-org/valilehti',
   listDrafts: true,

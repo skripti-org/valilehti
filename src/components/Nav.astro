@@ -4,7 +4,7 @@ import { toTitleCase } from '../utils/utils.ts'
 ---
 
 <nav class="nav py-3">
-  <ul class="nav-list dark:text-primarySecondaryDark">
+  <ul class="nav-list text-primaryDark dark:text-primarySecondary">
     {Object.keys(NAV_ITEMS).map((navItemKey) => (
       <li>
         <a
@@ -21,6 +21,6 @@ import { toTitleCase } from '../utils/utils.ts'
 
 <style>
   .nav-list {
-    @apply inline-flex list-none gap-8 text-xl font-semibold text-primarySecondary dark:text-primarySecondaryDark py-2 flex-wrap;
+    @apply inline-flex list-none gap-8 text-xl font-bold  py-2 flex-wrap;
   }
 </style>

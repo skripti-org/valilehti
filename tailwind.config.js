@@ -23,11 +23,10 @@ module.exports = {
       // Shades-of-X
       // keep one group of colors enabled at a time
 
-      backgroundDark: '#2a282d',
-      primary: '#FFFFFF',
-      primaryDark: '#6D7376',
-      primarySecondary: '#A0A6A9',
-      primarySecondaryDark: '#FFFFFF',
+      primary: '#1E90FF',
+      primaryDark: '#2a282d',
+      primarySecondary: '#FFFFFF',
+      primarySecondaryDark: '#6D7376',
 
       // primary: colors.pink[700],
       // primaryDark: colors.pink[300],

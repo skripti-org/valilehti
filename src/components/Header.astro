@@ -1,26 +1,27 @@
 ---
 import { SITE } from '../config'
 import SvgIcon from './SvgIcon.astro'
+
 //import SearchBtn from './SearchBtn.svelte'
 ---
 
-<header class="header">
+<header class="header border-primaryDark dark:border-primarySecondary">
   <div class="header__logo">
     <a href="/" class="avatar">
-      <img class="header__logo-img" src="/assets/Floppis.svg" alt="Astro logo"
-      />
+      <img class="header__logo-img" src="/assets/Floppis.svg" alt="Floppis" />
     </a>
   </div>
   <div class="header__meta flex-1">
-    <h3 class="header__title dark:text-primarySecondaryDark">
+    <h3 class="header__title dark:text-primary text-primaryDark">
       <a href="">{SITE.name}</a>
     </h3>
-    <div class="header__meta-more flex">
-      <p class="header__desc">
+    <div class="header__meta-more flex ">
+      <p class="header__desc text-primaryDark dark:text-primarySecondary">
         {SITE.description}
       </p>
       <nav class="header__nav flex">
         <ul class="header__ref-list">
+          <input id="themeSelector" type="checkbox" />
           <li>
             <a href={SITE.githubUrl} title={`${SITE.name}'s Github URL'`}>
               <SvgIcon>
@@ -45,6 +46,34 @@ import SvgIcon from './SvgIcon.astro'
   </div>
 </header>
 
+<script>
+  //toggle light ja dark moden välillä
+  const themeSelector = document.querySelector('#themeSelector')
+  const html = document.querySelector('html')
+
+  //checked = localstoragesta haettu arvo
+  const checked = JSON.parse(localStorage.getItem('themeSelector'))
+  themeSelector.checked = checked
+
+  //kun darkmode päällä selektorin arvo localstorageen ja lisätään dark html tägin classiin
+  const darkmodeOn = () => {
+    localStorage.setItem('themeSelector', themeSelector.checked)
+    html.classList.add('dark')
+  }
+
+  //tässä sama mutta poistetaan darkki html tägistä
+  darkmodeOff = () => {
+    localStorage.setItem('themeSelector', themeSelector.checked)
+    html.classList.remove('dark')
+  }
+  const toggleDarkMode = () => {
+    themeSelector.checked ? darkmodeOn() : darkmodeOff()
+  }
+
+  toggleDarkMode()
+  themeSelector.addEventListener('click', toggleDarkMode)
+</script>
+
 <style>
   .header {
     @apply flex gap-4 border-b py-3/* border-gray-200 dark:border-gray-700 - check styles/global.css */;
@@ -53,10 +82,10 @@ import SvgIcon from './SvgIcon.astro'
     @apply w-20 h-20;
   }
   .header__title {
-    @apply text-4xl font-extrabold md:text-5xl text-primarySecondary dark:text-primarySecondaryDark;
+    @apply text-4xl font-extrabold md:text-5xl;
   }
   .header__desc {
-    @apply text-xl flex-1 dark:text-gray-200;
+    @apply text-xl flex-1;
   }
   .header__ref-list {
     @apply flex gap-3 text-gray-400;
