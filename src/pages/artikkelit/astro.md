@@ -11,7 +11,7 @@ tags:
   - jam-stack
   - terve
   - test
-description: There's a simple secret to building a faster website — just ship less.
+description: Tarviiko tätä ees kysyä? There's a simple secret to building a faster website — just ship less.
 ---
 
 Unfortunately, modern web development has been trending in the opposite direction—towards more. More JavaScript, more features, more moving parts, and ultimately more complexity needed to keep it all running smoothly.

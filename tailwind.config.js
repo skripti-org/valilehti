@@ -65,7 +65,24 @@ module.exports = {
       typography: (theme) => ({
         dark: {
           css: {
-            color: theme('colors.primary'),
+            a: {
+              color: theme('colors.primarySecondaryDark'),
+              '&:hover': {
+                color: theme('colors.primary'),
+              },
+            },
+            h1: {
+              color: theme('colors.primarySecondary'),
+            },
+            h2: {
+              color: theme('colors.primarySecondary'),
+            },
+            h3: {
+              color: theme('colors.primarySecondary'),
+            },
+            h4: {
+              color: theme('colors.primarySecondary'),
+            },
           },
         },
         DEFAULT: {
@@ -77,20 +94,23 @@ module.exports = {
               },
             },
             blockquote: {
-              color: theme('colors.primarySecondaryDark'),
+              color: theme('colors.primaryDark'),
               borderColor: theme('colors.primaryDark'),
             },
             'blockquote > p::before, p::after': {
-              color: theme('colors.primarySecondaryDark'),
+              color: theme('colors.primaryDark'),
             },
             h1: {
-              color: theme('colors.primarySecondaryDark'),
+              color: theme('colors.primaryDark'),
             },
             h2: {
-              color: theme('colors.primarySecondaryDark'),
+              color: theme('colors.primaryDark'),
             },
             h3: {
-              color: theme('colors.primarySecondaryDark'),
+              color: theme('colors.primaryDark'),
+            },
+            h4: {
+              color: theme('colors.primaryDark'),
             },
           },
         },

@@ -20,12 +20,14 @@ const { content } = Astro.props
       <div class="post__tags">
         {content.tags.length > 0 &&
           content.tags.map((tag) => (
-            <a class="post__tag" href={`/tags/${tag}`} title={tag}>
+            <a class="post__tag " href={`/tags/${tag}`} title={tag}>
               {tag}
             </a>
           ))}
       </div>
-      <h1 class="post__title">{content.title}</h1>
+      <h1 class="post__title text-primaryDark dark:text-primarySecondary">
+        {content.title}
+      </h1>
       <h5 class="post__desc">
         <a
           class="post__author"
@@ -53,7 +55,7 @@ const { content } = Astro.props
     @apply py-4 mb-1;
   }
   .post__title {
-    @apply text-5xl font-extrabold text-primary dark:text-primaryDark;
+    @apply text-5xl font-extrabold mb-2;
   }
   .post__desc {
     @apply text-gray-500 dark:text-gray-100;

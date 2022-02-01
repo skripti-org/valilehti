@@ -3,7 +3,7 @@ import { getMonthName } from '../utils/utils.ts'
 const { post } = Astro.props
 ---
 
-<div class="post-preview">
+<div class="post-preview ">
   <div class="sm:w-20 md:w-32">
     <div class="post-preview__date">
       <span
@@ -22,7 +22,9 @@ const { post } = Astro.props
     <h4 class="post-preview__title text-primaryDark dark:text-primarySecondary">
       <a href={post.url} title={post.title}>{post.title}</a>
     </h4>
-    <p class="post-preview__desc text-primaryDark dark:text-primarySecondary">
+    <p
+      class="post-preview__desc mb-2 text-primaryDark dark:text-primarySecondary"
+    >
       {post.description}
     </p>
   </div>
@@ -40,7 +42,7 @@ const { post } = Astro.props
   }
 
   .post-preview__title {
-    @apply text-2xl font-semibold  hover:underline mb-2;
+    @apply text-2xl font-semibold mb-2 hover:underline;
   }
   .post-preview__desc {
     @apply text-lg leading-6 line-clamp-2;
