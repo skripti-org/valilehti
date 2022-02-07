@@ -27,6 +27,7 @@ module.exports = {
       primaryDark: '#2a282d',
       primarySecondary: '#FFFFFF',
       primarySecondaryDark: '#6D7376',
+      secondaryDark: '#3A4043',
 
       // primary: colors.pink[700],
       // primaryDark: colors.pink[300],
@@ -71,6 +72,13 @@ module.exports = {
                 color: theme('colors.primary'),
               },
             },
+            blockquote: {
+              color: theme('colors.primarySecondary'),
+              borderColor: theme('colors.primarySecondary'),
+            },
+            'blockquote > p::before, p::after': {
+              color: theme('colors.primarySecondary'),
+            },
             h1: {
               color: theme('colors.primarySecondary'),
             },
@@ -88,9 +96,9 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.primarySecondaryDark'),
+              color: theme('colors.secondaryDark'),
               '&:hover': {
-                color: theme('colors.primary'),
+                color: theme('colors.primarySecondary'),
               },
             },
             blockquote: {

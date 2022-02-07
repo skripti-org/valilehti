@@ -8,7 +8,7 @@ import { toTitleCase } from '../utils/utils.ts'
     {Object.keys(NAV_ITEMS).map((navItemKey) => (
       <li>
         <a
-          class="hover:underline"
+          class="hover:underline "
           href={NAV_ITEMS[navItemKey].path}
           title={NAV_ITEMS[navItemKey].title}
         >
@@ -21,6 +21,6 @@ import { toTitleCase } from '../utils/utils.ts'
 
 <style>
   .nav-list {
-    @apply inline-flex list-none gap-8 text-xl font-bold  py-2 flex-wrap;
+    @apply inline-flex list-none gap-8 text-2xl font-bold  py-2 flex-wrap;
   }
 </style>

@@ -20,7 +20,7 @@ const { content } = Astro.props
       <div class="post__tags">
         {content.tags.length > 0 &&
           content.tags.map((tag) => (
-            <a class="post__tag " href={`/tags/${tag}`} title={tag}>
+            <a class="post__tag " href={`/tagit/${tag}`} title={tag}>
               {tag}
             </a>
           ))}
@@ -61,15 +61,15 @@ const { content } = Astro.props
     @apply text-gray-500 dark:text-gray-100;
   }
   .post__author {
-    @apply no-underline dark:text-white hover:text-primary;
+    @apply no-underline text-primaryDark dark:text-white;
   }
   .post__date {
-    @apply text-gray-400;
+    @apply text-primaryDark dark:text-primarySecondary;
   }
   .post__tags {
     @apply inline-flex gap-2;
   }
   .post__tag {
-    @apply text-gray-400 hover:text-primary dark:hover:text-primaryDark;
+    @apply text-secondaryDark hover:text-primarySecondary dark:text-primarySecondaryDark dark:hover:text-primary;
   }
 </style>
